@@ -2,6 +2,7 @@ package tpe3;
 
 import Grafo.GrafoDirigido;
 import Grafo.ServicioBreadthFirstSearch;
+import Grafo.ServicioCaminos;
 import Grafo.ServicioDepthFirstSearch;
 
 public class main {
@@ -27,6 +28,11 @@ public class main {
 		ServicioDepthFirstSearch servicioDFS = new ServicioDepthFirstSearch(grafoDirigido);
 		
 		System.out.println("dfsForest: "+servicioDFS.dfsForest().toString());
+		
+		ServicioCaminos servCaminos =  new ServicioCaminos(grafoDirigido, 1, 2, 2);
+		
+		servCaminos.caminos();
+		System.out.println("Servicio caminos " + servCaminos.toString());
 	}
 
 }
