@@ -68,7 +68,7 @@ public class ServicioDepthFirstSearch {
 		return listado;
 	}
 	
-	private List<Integer> dfsForest(int verticeId){ //TODO esta bien ???? no me convence no se si es lo que pide el enunciado
+	private List<Integer> dfsForest(int verticeId){ 
 		Iterator<Integer> adyacentes =  this.grafo.obtenerAdyacentes(verticeId);
 		ArrayList<Integer> listado = new ArrayList<Integer>();
 		this.colores.replace(verticeId,"AMARILLO");

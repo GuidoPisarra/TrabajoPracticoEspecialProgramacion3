@@ -72,7 +72,7 @@ public class ServicioBreadthFirstSearch {
 		return listado;
 	}
 	
-	private List<Integer> bfsForest(int verticeId){ //TODO PREGUNTAR!!!! No se si esta bien...
+	private List<Integer> bfsForest(int verticeId){ 
 		ArrayList<Integer> listado = new ArrayList<Integer>();
 		Iterator<Integer> adyacentes = this.grafo.obtenerAdyacentes(verticeId);
 		this.verticesVisitados.replace(verticeId, true);
@@ -82,11 +82,8 @@ public class ServicioBreadthFirstSearch {
 		while(!fila.isEmpty()) {
 			fila.remove(0);
 			while (adyacentes.hasNext()) {
-				int adyacente = adyacentes.next();
-				
-				//if(verticesVisitados.get(adyacente).equals(false)) { 
+				int adyacente = adyacentes.next();				
 					fila.add(adyacente);
-				//}
 			}
 		}
 		return listado;

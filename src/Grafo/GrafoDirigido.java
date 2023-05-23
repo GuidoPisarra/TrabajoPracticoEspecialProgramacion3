@@ -1,10 +1,9 @@
 package Grafo;
 
-import java.util.ArrayList;
+
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.Objects;
 
 import Interfaces.Grafo;
 
@@ -36,6 +35,9 @@ public class GrafoDirigido<T> implements Grafo<T> {
 		}
 	}
 
+	/**
+	 * O(1)
+	 */
 	@Override
 	public void borrarArco(int verticeId1, int verticeId2) {
 		if(vertices.containsKey(verticeId1)) {			
@@ -58,6 +60,10 @@ public class GrafoDirigido<T> implements Grafo<T> {
 		return false;
 	}
 
+	
+	/**
+	 * O(1)
+	 */
 	@Override
 	public Arco<T> obtenerArco(int verticeId1, int verticeId2) {
 		if(vertices.containsKey(verticeId1) && vertices.get(verticeId1).containsKey(verticeId2)) {
@@ -100,10 +106,15 @@ public class GrafoDirigido<T> implements Grafo<T> {
 				arcos.add(tmp);
 			}
 		}
+		
+		
 		return arcos.iterator();
 	}// investigar entry
 	
 	
+	/**
+	 * O(a)
+	 */	
 	@Override
 	public Iterator<Arco<T>> obtenerArcos(int verticeId) {
 		LinkedList<Arco<T>> arcos = new LinkedList<Arco<T>>();
@@ -113,6 +124,15 @@ public class GrafoDirigido<T> implements Grafo<T> {
 				arcos.add(tmp);
 			
 		}
+
+		/**
+		 * profesor
+		 * 
+		 * for(Entry<Integer,T) : info vertices.get(verticeId).entrySet()){
+		 * 		Arco<T> tmp = new Arco<T> (verticeId,i, info.getKey(),info.getValue());
+		 *		arcos.add(tmp);
+		 *		]
+		 */
 		return arcos.iterator();
 	}
 	

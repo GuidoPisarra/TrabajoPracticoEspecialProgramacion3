@@ -1,4 +1,4 @@
-package tpe3;
+package tpe3PrimerParte;
 
 import Grafo.GrafoDirigido;
 import Grafo.ServicioBreadthFirstSearch;
@@ -29,10 +29,9 @@ public class main {
 		
 		System.out.println("dfsForest: "+servicioDFS.dfsForest().toString());
 		
-		ServicioCaminos servCaminos =  new ServicioCaminos(grafoDirigido, 1, 2, 2);
+		ServicioCaminos servCaminos =  new ServicioCaminos(grafoDirigido, 1, 2, 4);
 		
-		servCaminos.caminos();
-		System.out.println("Servicio caminos " + servCaminos.toString());
+		System.out.println("Servicio caminos " + servCaminos.caminos().toString());
 	}
 
 }
