@@ -37,6 +37,16 @@ public class ServicioCaminos {
 		return this.caminosResultantes;
 	}
 	
+	
+	/**
+	 * Este método funciona para el grafo que implemente, en realidad no me convence dicha implementción
+	 * mas que nada por la línea 64, para la cual tenía entendido que va antes del llamado recursivo. Lo vi en 
+	 * la clase del miércoles 24/05 pero tampoco no pude resolverlo.
+	 * Mas abajo y comentado se encuentra el método que lleve a la clase, el cual, a mi forma de ver, agrega el 
+	 * arco en el lugar correspondiente. 
+	 */
+	
+	
 	private void buscarCamino(List<Integer> caminoActual, int actual, int pasos){
 		if(actual==this.destino) {
 			ArrayList<Integer> camino = new ArrayList<Integer>(); 
