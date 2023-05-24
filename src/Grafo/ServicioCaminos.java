@@ -50,17 +50,40 @@ public class ServicioCaminos {
 					Arco<?> arco = this.grafo.obtenerArco(actual, adyacente); 
 					if(!this.arcosVisitados.contains(arco)) { 
 						caminoActual.add(adyacente); 
+						buscarCamino(caminoActual, adyacente, pasos+1); 
 						this.arcosVisitados.add(arco); 					
-						buscarCamino(caminoActual, adyacente, pasos++); 
 						caminoActual.remove(caminoActual.size()-1);
 						this.arcosVisitados.remove(arcosVisitados.size()-1);
-						pasos--;
 					}
 				}				
 			}			
 		}		
 	}
 	
+	
+//	private void buscarCamino(List<Integer> caminoActual, int actual, int pasos){
+//		if(actual==this.destino) {
+//			ArrayList<Integer> camino = new ArrayList<Integer>(); 
+//			camino.addAll(caminoActual); 
+//			this.caminosResultantes.add(camino);
+//		}else {
+//			Iterator<Integer> adyacentes = this.grafo.obtenerAdyacentes(actual);	
+//			if(pasos<this.lim) { 
+//				while (adyacentes.hasNext()) {
+//					int adyacente = adyacentes.next(); 
+//					Arco<?> arco = this.grafo.obtenerArco(actual, adyacente); 
+//					System.out.println(this.arcosVisitados.contains(arco));
+//					if(!this.arcosVisitados.contains(arco)) { 
+//						caminoActual.add(adyacente); 
+//						buscarCamino(caminoActual, adyacente, pasos+1); 
+//						this.arcosVisitados.add(arco); 					
+//						caminoActual.remove(caminoActual.size()-1);
+//						this.arcosVisitados.remove(arcosVisitados.size()-1);
+//					}
+//				}				
+//			}			
+//		}		
+//	}
 
 	
 }

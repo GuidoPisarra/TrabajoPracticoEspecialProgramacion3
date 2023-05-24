@@ -18,39 +18,6 @@ public class ServicioBreadthFirstSearch {
 		this.grafo = grafo;
 	}
 	
-	public void routeGrafo() {
-		Iterator<Integer> vertices = this.grafo.obtenerVertices();
-		while(vertices.hasNext()) {
-			int vertice = vertices.next();
-			this.verticesVisitados.put(vertice, false);
-		}
-		
-		this.fila.clear();	
-		vertices = this.grafo.obtenerVertices();
-		while(vertices.hasNext()) {
-			int vertice = vertices.next();
-			if(verticesVisitados.get(vertice).equals(false)) {
-				this.visit_BFS(vertice);
-			}
-		}
-		
-	}
-	
-	private void visit_BFS(int verticeId) {
-		this.verticesVisitados.put(verticeId, true);
-		this.fila.add(verticeId);
-		while(!fila.isEmpty()) {
-			fila.poll();
-			Iterator<Integer> adyacentes = this.grafo.obtenerAdyacentes(verticeId);
-			while (adyacentes.hasNext()) {
-				int adyacente = adyacentes.next();
-				if(verticesVisitados.get(adyacente).equals(false)) {
-					this.verticesVisitados.replace(verticeId, true);
-					fila.add(adyacentes.next());
-				}
-			}
-		}
-	}
 	
 	public List<Integer> bfsForest(){
 		Iterator<Integer> vertices = this.grafo.obtenerVertices();
@@ -89,5 +56,5 @@ public class ServicioBreadthFirstSearch {
 		return listado;
 	}
 
-	
+
 }

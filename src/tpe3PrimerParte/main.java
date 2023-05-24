@@ -17,6 +17,8 @@ public class main {
 		
 		grafoDirigido.agregarArco(1, 2, 12);
 		grafoDirigido.agregarArco(1, 3, 13);
+		grafoDirigido.agregarArco(1, 4, 13);
+
 		grafoDirigido.agregarArco(4, 1, 41);
 		grafoDirigido.agregarArco(3, 4, 34);
 		grafoDirigido.agregarArco(3, 2, 32);
@@ -29,7 +31,7 @@ public class main {
 		
 		System.out.println("Recorrido DFS Forest: "+servicioDFS.dfsForest().toString());
 		
-		ServicioCaminos servCaminos =  new ServicioCaminos(grafoDirigido, 1, 2, 3);
+		ServicioCaminos servCaminos =  new ServicioCaminos(grafoDirigido, 1, 2, 2);
 		
 		System.out.println("Servicio caminos " + servCaminos.caminos().toString());
 	}
