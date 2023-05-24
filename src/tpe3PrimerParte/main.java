@@ -23,13 +23,13 @@ public class main {
 		
 		ServicioBreadthFirstSearch servicioBFS =  new ServicioBreadthFirstSearch(grafoDirigido);
 		
-		System.out.println("bfsForest: "+servicioBFS.bfsForest().toString());
+		System.out.println("Recorrido BFS Forest: "+servicioBFS.bfsForest().toString());
 		
 		ServicioDepthFirstSearch servicioDFS = new ServicioDepthFirstSearch(grafoDirigido);
 		
-		System.out.println("dfsForest: "+servicioDFS.dfsForest().toString());
+		System.out.println("Recorrido DFS Forest: "+servicioDFS.dfsForest().toString());
 		
-		ServicioCaminos servCaminos =  new ServicioCaminos(grafoDirigido, 1, 2, 4);
+		ServicioCaminos servCaminos =  new ServicioCaminos(grafoDirigido, 1, 2, 3);
 		
 		System.out.println("Servicio caminos " + servCaminos.caminos().toString());
 	}
