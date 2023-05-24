@@ -1,10 +1,11 @@
-package Grafo;
+package Servicios;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
+import Grafo.Arco;
 import Interfaces.Grafo;
 
 public class ServicioCaminos {

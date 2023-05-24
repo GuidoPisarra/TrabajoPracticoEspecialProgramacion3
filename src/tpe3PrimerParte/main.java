@@ -1,9 +1,9 @@
 package tpe3PrimerParte;
 
 import Grafo.GrafoDirigido;
-import Grafo.ServicioBreadthFirstSearch;
-import Grafo.ServicioCaminos;
-import Grafo.ServicioDepthFirstSearch;
+import Servicios.ServicioBreadthFirstSearch;
+import Servicios.ServicioCaminos;
+import Servicios.ServicioDepthFirstSearch;
 
 public class main {
 
